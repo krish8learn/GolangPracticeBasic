@@ -17,7 +17,13 @@ func main() {
 	for message := range channel {
 		fmt.Println(message)
 	}
-
+	/*for {
+		nes, open := <-channel
+		if !open {
+			break
+		}
+		fmt.Println(nes)
+	}*/ //another way writing the above for loop
 }
 func goal(channel chan string) {
 	number := 4
